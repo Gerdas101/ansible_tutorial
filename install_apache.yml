@@ -20,3 +20,20 @@
       name: libapache2-mod-php
       state: latest
     when: ansible_distribution in ["Ubuntu", "Debian"]
+
+  - name: update repository index
+    dnf:
+      update_cache: yes
+    when: ansible_distribution in ["Fedora", "RedHat", "CentOS"]
+
+  - name: Install Apache2 package
+    dnf: 
+      name: httpd
+      state: latest
+    when: ansible_distribution in ["Fedora", "RedHat", "CentOS"]
+
+  - name: add php support for apache2
+    dnf:
+      name: php
+      state: latest
+    when: ansible_distribution in ["Fedora", "RedHat", "CentOS"]
