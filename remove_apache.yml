@@ -8,8 +8,10 @@
     apt: 
       name: apache2
       state: absent
+    when: ansible_distribution == "Ubuntu" or ansible_distribution == "Debian"
 
   - name: Remove php support for apache2
     apt:
       name: libapache2-mod-php
       state: absent
+    when: ansible_distribution == "Ubuntu" or ansible_distribution == "Debian"
