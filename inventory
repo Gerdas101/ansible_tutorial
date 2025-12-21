@@ -1,3 +1,6 @@
-168.231.127.130 ansible_python_interpreter=/usr/bin/python3.12 apache_package=apache2 php_package=libapache2-mod-php
-31.97.72.233 ansible_python_interpreter=/usr/bin/python3.12 apache_package=apache2 php_package=libapache2-mod-php
+[db_servers]
+168.231.127.130 ansible_python_interpreter=/usr/bin/python3.12
+
+[web_servers]
+31.97.72.233 ansible_python_interpreter=/usr/bin/python3.12
 
